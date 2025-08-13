@@ -6,6 +6,7 @@ DOCKER_LATEST_TAG ?= latest
 
 build:
 	docker buildx build \
+  --platform linux/amd64,linux/arm64 \
 	--cache-from type=local,src=/tmp/.buildx-$(BRANCH_NAME)-chargestation-cache \
 	--cache-to type=local,mode=max,dest=/tmp/.buildx-$(BRANCH_NAME)-chargestation-cache \
 	--provenance mode=min,inline-only=true \

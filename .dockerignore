@@ -1,0 +1,23 @@
+### react template
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+dist
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+.github
+.idea
+.git
+
+Dockerfile
+Makefile
