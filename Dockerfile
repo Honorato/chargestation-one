@@ -1,8 +1,10 @@
 FROM node:20-alpine AS build
 WORKDIR /app
 
-COPY . .
+COPY package.json yarn.lock ./
 RUN yarn install --ignore-scripts
+
+COPY . .
 RUN yarn run build
 
 FROM nginx:alpine AS production
