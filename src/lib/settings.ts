@@ -440,6 +440,16 @@ export const defaultVariableConfig16: Variable16[] = [
     description: 'OCMF separate or combined data points',
     value: 'MR',
   },
+  {
+    key: 'MeterValuesSampledDataMaxLength',
+    description: 'Maximum length of the sampled data list',
+    value: 10,
+  },
+  {
+    key: 'StopTxnSampledDataMaxLength',
+    description: 'Maximum length of the stop transaction sampled data list',
+    value: 10,
+  }
 ];
 
 export interface Variable2 {
