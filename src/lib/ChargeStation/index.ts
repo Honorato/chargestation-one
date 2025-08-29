@@ -574,6 +574,9 @@ export class Session {
         this.emitter.emitEvent(EventTypes.ChargingLimitReached, {
           session: this,
         });
+        if (this.chargeStation.configuration.getVariableValue("StopTransactionOnEVSideDisconnect") == "true") {
+          await this.stop();
+        }
       } else if (['Charging', 'Occupied'].includes(this.connectorStatus)) {
         this.kwhElapsed += amountKwhToCharge;
       }
